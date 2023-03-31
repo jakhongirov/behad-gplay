@@ -6,12 +6,6 @@ function AdsApp() {
     const [data, setData] = useState({})
     const { packageName, campaign_id, app_ads_id, user_id } = useParams()
 
-    const closeTab = () => {
-        window.opener = null;
-        window.open("", "_self");
-        window.close();
-    };
-
     useEffect(() => {
         fetch('https://ads.adstar.uz/api/v1/gplay?packagename=' + packageName, {
             method: "GET",
@@ -64,9 +58,8 @@ function AdsApp() {
                             <p className='text'>{data.summary}</p>
 
                             <div className='btn_box'>
-                                <button className='close' onClick={closeTab}>Close</button>
 
-                                <a className='install' href={data.url} target="_blank" rel="noopener noreferrer" onClick={AddAction}>Install</a>
+                                <a className='install' href={data.url} target="_blank" rel="noopener noreferrer" onClick={AddAction}>O'rnatish</a>
 
                             </div>
 
