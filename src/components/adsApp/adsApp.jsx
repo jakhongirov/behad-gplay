@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 
 function AdsApp() {
     const [data, setData] = useState({})
-    const { packageName } = useParams()
+    const { packageName, campaign_id, app_ads_id, user_id } = useParams()
 
     const closeTab = () => {
         window.opener = null;
@@ -30,6 +30,25 @@ function AdsApp() {
             .catch((e) => console.log(e))
     }, [packageName])
 
+    const AddAction = () => {
+
+        fetch("https://ads.adstar.uz/api/v1/addAction", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                app_ads_id: app_ads_id,
+                action: 3,
+                campaign_id: campaign_id,
+                user_id: user_id
+            })
+        }).then(res => res.json())
+            .then(data => {
+                console.log(data);
+            }).catch((e) => console.log(e))
+    }
+
     return (
         <>
             <main className='main'>
@@ -47,7 +66,7 @@ function AdsApp() {
                             <div className='btn_box'>
                                 <button className='close' onClick={closeTab}>Close</button>
 
-                                <a className='install' href={data.url} target="_blank" rel="noopener noreferrer">Install</a>
+                                <a className='install' href={data.url} target="_blank" rel="noopener noreferrer" onClick={AddAction}>Install</a>
 
                             </div>
 
