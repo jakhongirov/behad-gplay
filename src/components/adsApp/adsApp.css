@@ -1,0 +1,91 @@
+.model_item {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.img_box {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.img{
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+}
+
+.title {
+    display: block;
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 48px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 600;
+}
+
+.text {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.btn_box {
+    display: flex;
+    width: 100%;
+    max-width: 320px;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.close {
+    display: block;
+    padding: 15px 50px;
+    text-align: center;
+    background: transparent;
+    border: 0.5px solid grey;
+    border-radius: 10px;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+.close:active {
+    opacity: 0.7;
+}
+
+.install {
+    display: block;
+    padding: 15px 50px;
+    text-align: center;
+    background: green;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.install:active {
+    opacity: 0.7;
+}
+
+.gp_img {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+}
